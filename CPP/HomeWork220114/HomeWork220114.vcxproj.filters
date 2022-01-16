@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="HomeWork220114.cpp">
+    <ClCompile Include="HomeWork220114ToInt.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
