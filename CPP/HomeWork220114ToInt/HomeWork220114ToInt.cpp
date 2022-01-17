@@ -34,11 +34,9 @@ int ToInt(const char* _Left) {
 
 	for (int i = 0; i < Len; i += 1) {
 		arr[i] = _Left[Len - 1 - i] - 48;
-	}
-
-	for (int i = 0; i < Len; i += 1) {
 		sum += arr[i] * pow(i);
 	}
+
 
 	return sum;
 }
