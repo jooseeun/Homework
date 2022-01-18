@@ -13,18 +13,16 @@ int StringLen(const char* _Ptr)
 void TextChange(char* _Text, const char* _Prev, const char* _Next)
 {
 	int Len = StringLen(_Text);
-	
 	for (int i = 0; i < Len; i++)
 	{
 		if (_Text[i] == _Prev[0] && _Text[i + 1] == _Prev[1]) {
+			_Text[i] = _Next[0];
+			_Text[i + 1] = _Next[1];
 			Len += 1;
-			_Text[Len] = 'k';
-			for (int j = Len-1; j ==i; j-=1)
+			for (int j = Len; j > i+2; j-=1)
 			{
 				_Text[j] = _Text[j-1];
 			}
-			_Text[i] = _Next[0];
-			_Text[i + 1] = _Next[1];
 			_Text[i + 2] = _Next[2];
 		}
 
