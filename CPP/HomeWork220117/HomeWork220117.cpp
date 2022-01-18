@@ -14,7 +14,7 @@ int StringLen(const char* _Ptr)
 int CountFirst(const char* _Text, int _Start, const char* _FindStr)
 {
     int Len = StringLen(_Text);
-    for (int i = 0; i < Len; i++)
+    for (int i = _Start; i < Len; i++)
     {
         if (_Text[i]==_FindStr[0]&& _Text[i+1] == _FindStr[1]&& _Text[i+2] == _FindStr[2])
         {
@@ -29,7 +29,7 @@ int CountLast(const char* _Text, int _End, const char* _FindStr)
 {
     int count = 0;
     int Len = StringLen(_Text);
-    for (int i = Len-3; i >1; i--)
+    for (int i = _End; i >1; i--)
     {
         if (_Text[i] == _FindStr[0] && _Text[i + 1] == _FindStr[1] && _Text[i + 2] == _FindStr[2])
         {
