@@ -13,27 +13,27 @@
 // 설명 :
 class ConsoleScreen
 {
-//  static ConsoleScreen MainScreen;
+	//  static ConsoleScreen MainScreen;
 
-	//  Value형 싱글톤
-//private:
-//	static ConsoleScreen MainScreen;
-//public:
-//	static ConsoleScreen& GetInst();
+		//  Value형 싱글톤
+	//private:
+	//	static ConsoleScreen MainScreen;
+	//public:
+	//	static ConsoleScreen& GetInst();
 
-//private:
-//	static ConsoleScreen* MainScreen;
-//
-//public:
-//	static ConsoleScreen& GetInst(); 뭘로해도 상관 없다.
-//  static ConsoleScreen* GetInst(); 뭘로해도 상관 없다.
-//	static void Destroy();
+	//private:
+	//	static ConsoleScreen* MainScreen;
+	//
+	//public:
+	//	static ConsoleScreen& GetInst(); 뭘로해도 상관 없다.
+	//  static ConsoleScreen* GetInst(); 뭘로해도 상관 없다.
+	//	static void Destroy();
 
 private:
 	static ConsoleScreen* MainScreen;
 
 public:
-	static ConsoleScreen& GetInst(); 
+	static ConsoleScreen& GetInst();
 	static void Destroy();
 
 public:

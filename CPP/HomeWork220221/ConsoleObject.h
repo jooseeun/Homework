@@ -12,10 +12,10 @@ public:
 
 	// constrcuter destructer
 	ConsoleObject(
-		const char* _Text, 
+		const char* _Text,
 		const ConsoleVector& _Pos);
 
-	~ConsoleObject();
+	virtual ~ConsoleObject();
 
 	// delete Function
 	ConsoleObject(const ConsoleObject& _Other) = delete;
@@ -41,6 +41,7 @@ public:
 
 	virtual void Update();
 	virtual void Render();
+	virtual void ListDestroy();
 	virtual void OverLap(ConsoleObject* _Other);
 	bool OverLapCheck(const ConsoleObject* _Other);
 
@@ -55,7 +56,7 @@ public:
 		SetRenderChar(_Text);
 	}
 
-	inline void Death() 
+	inline void Death()
 	{
 		IsDeath_ = true;
 	}

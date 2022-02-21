@@ -1,16 +1,19 @@
 #include "Head.h"
 #include <conio.h>
 
-Head::Head() 
+std::list<Body*>::iterator iter;
+
+Head::Head()
 {
 }
 
-Head::~Head() 
+Head::~Head()
 {
+	
 }
 
 
-void Head::Update() 
+void Head::Update()
 {
 	int Value = _getch();
 
@@ -46,9 +49,17 @@ void Head::Update()
 	return;
 }
 
-
-
 void Head::OverLap(ConsoleObject* _Link)
 {
 	AllBody.push_back((Body*)_Link);
+}
+
+
+void Head::ListDestroy() {
+	while (AllBody.empty() == false)
+	{
+		iter = AllBody.begin();
+		delete (ConsoleObject*)(*iter);
+		AllBody.erase(iter);
+	}
 }

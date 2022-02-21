@@ -18,9 +18,8 @@ public:
 
 protected:
 	void Update() override;
-
 	void OverLap(ConsoleObject* _Other);
-
+	void ListDestroy() override;
 private:
 	std::list<Body*> AllBody;
 };

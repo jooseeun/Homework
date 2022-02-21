@@ -9,7 +9,7 @@ ConsoleObject::ConsoleObject()
 ConsoleObject::ConsoleObject(
 	const char* _Text,
 	const ConsoleVector& _Pos
-	)
+)
 	: Pos_(_Pos)
 {
 	//if (nullptr == _Screen)
@@ -20,16 +20,16 @@ ConsoleObject::ConsoleObject(
 	SetRenderChar(_Text);
 }
 
-ConsoleObject::~ConsoleObject() 
+ConsoleObject::~ConsoleObject()
 {
 }
 
-void ConsoleObject::Update() 
+void ConsoleObject::Update()
 {
 
 }
 
-void ConsoleObject::Render() 
+void ConsoleObject::Render()
 {
 	ConsoleScreen::GetInst().SetPixel(Pos_, Text_);
 }
@@ -84,13 +84,16 @@ void ConsoleObject::SetRenderChar(const char* _Text)
 void ConsoleObject::OverLap(ConsoleObject* _Other) {
 
 }
+void ConsoleObject::ListDestroy() {
 
-bool ConsoleObject::OverLapCheck(const ConsoleObject* _Other) 
+}
+
+bool ConsoleObject::OverLapCheck(const ConsoleObject* _Other)
 {
 	if (GetPos() == _Other->GetPos())
 	{
 		return true;
 	}
-	
+
 	return false;
 }

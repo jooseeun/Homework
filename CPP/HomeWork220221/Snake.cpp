@@ -1,26 +1,30 @@
-ï»¿// Snake.cpp : ì´ íŒŒì¼ì—ëŠ” 'main' í•¨ìˆ˜ê°€ í¬í•¨ë©ë‹ˆë‹¤. ê±°ê¸°ì„œ í”„ë¡œê·¸ë¨ ì‹¤í–‰ì´ ì‹œì‘ë˜ê³  ì¢…ë£Œë©ë‹ˆë‹¤.
+// Snake.cpp : ÀÌ ÆÄÀÏ¿¡´Â 'main' ÇÔ¼ö°¡ Æ÷ÇÔµË´Ï´Ù. °Å±â¼­ ÇÁ·Î±×·¥ ½ÇÇàÀÌ ½ÃÀÛµÇ°í Á¾·áµË´Ï´Ù.
 //
 
 #include <iostream>
-#include "Engine/ConsoleScreen.h"
+//#include "Engine/ConsoleScreen.h"
+#include "ConsoleScreen.h"
 #include <conio.h>
 #include "Head.h"
 #include "Body.h"
 #include <vector>
-#include "Engine/ConsoleRandom.h"
+#include "ConsoleRandom.h"
+//#include "Engine/ConsoleRandom.h"
 #include "GlobalGameLogic.h"
+
+
 
 int main()
 {
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
-
-	ConsoleScreen::GetInst().CreateScreen(10, 10, "â–¡");
+	
+	ConsoleScreen::GetInst().CreateScreen(10, 10, "¡à");
 
 	ConsoleObject* NewHead = new Head();
-	NewHead->Init({ 5, 5 }, "â˜…");
+	NewHead->Init({ 5, 5 }, "¡Ú");
 
 
-	ConsoleObject* NewBody = GlobalGameLogic::CreateBodyLogic(NewHead);
+	ConsoleObject* NewBody= GlobalGameLogic::CreateBodyLogic(NewHead);
 
 	while (true)
 	{
@@ -40,16 +44,23 @@ int main()
 		NewHead->Update();
 
 		if (true == NewHead->GetIsDeath())
-		{
+		{	
 			break;
 		}
 
-		if (NewHead->OverLapCheck(NewBody))
+		if (true == NewHead->OverLapCheck(NewBody))
 		{
 			NewHead->OverLap(NewBody);
 			NewBody = nullptr;
 		}
 	}
+	
+	NewHead->ListDestroy();
 
+	delete NewHead;
+	NewHead = nullptr;
+
+	delete NewBody;
+	NewBody = nullptr;
 	ConsoleScreen::Destroy();
 }

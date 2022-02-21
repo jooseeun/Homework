@@ -1,12 +1,12 @@
 #pragma once
-#include "Engine/ConsoleObject.h"
-
+#include "ConsoleObject.h"
+//#include "Engine/ConsoleObject.h"
+// 
 // Ό³Έν :
 class GlobalGameLogic
 {
 public:
 	static ConsoleObject* CreateBodyLogic(const ConsoleObject* _Player);
-
 
 protected:
 

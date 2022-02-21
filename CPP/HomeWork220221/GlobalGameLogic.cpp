@@ -1,22 +1,22 @@
 #include "GlobalGameLogic.h"
 #include <vector>
 #include <time.h>
-#include "Engine/ConsoleRandom.h"
+//#include "Engine/ConsoleRandom.h"
+#include "ConsoleRandom.h"
 
-GlobalGameLogic::GlobalGameLogic() 
+GlobalGameLogic::GlobalGameLogic()
 {
 }
 
-GlobalGameLogic::~GlobalGameLogic() 
+GlobalGameLogic::~GlobalGameLogic()
 {
 }
 
 
 
-ConsoleObject* GlobalGameLogic::CreateBodyLogic(const ConsoleObject* _Player) 
+ConsoleObject* GlobalGameLogic::CreateBodyLogic(const ConsoleObject* _Player)
 {
 	ConsoleObject* NewBody = new ConsoleObject();
-
 	std::vector<ConsoleVector> AllPos;
 	AllPos.reserve(ConsoleScreen::GetInst().GetSize().x_ * ConsoleScreen::GetInst().GetSize().y_);
 	AllPos.clear();
@@ -37,5 +37,7 @@ ConsoleObject* GlobalGameLogic::CreateBodyLogic(const ConsoleObject* _Player)
 
 	ConsoleRandom Random = ConsoleRandom(time(nullptr));
 	NewBody->Init(AllPos[Random.Next(0, AllPos.size())], "£À");
+
 	return NewBody;
 }
+

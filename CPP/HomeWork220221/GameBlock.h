@@ -1,5 +1,7 @@
 #pragma once
-#include "Engine/ConsoleObject.h"
+
+//#include "Engine/ConsoleObject.h"
+#include "ConsoleObject.h"
 
 // Ό³Έν :
 class GameBlock : public ConsoleObject
