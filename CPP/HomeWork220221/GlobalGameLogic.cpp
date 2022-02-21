@@ -3,17 +3,17 @@
 #include <time.h>
 #include "Engine/ConsoleRandom.h"
 
-GlobalGameLogic::GlobalGameLogic()
+GlobalGameLogic::GlobalGameLogic() 
 {
 }
 
-GlobalGameLogic::~GlobalGameLogic()
+GlobalGameLogic::~GlobalGameLogic() 
 {
 }
 
 
 
-ConsoleObject* GlobalGameLogic::CreateBodyLogic(const ConsoleObject* _Player)
+ConsoleObject* GlobalGameLogic::CreateBodyLogic(const ConsoleObject* _Player) 
 {
 	ConsoleObject* NewBody = new ConsoleObject();
 

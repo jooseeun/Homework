@@ -44,7 +44,7 @@ void ConsoleScreen::Destroy()
 }
 
 
-ConsoleScreen::ConsoleScreen()
+ConsoleScreen::ConsoleScreen() 
 	: PixelData_(nullptr)
 	, Size_(0, 0)
 	, DefaultPixel_() // 사실 해줄필요가 없다.
@@ -91,7 +91,7 @@ void ConsoleScreen::CreateScreen(int _Width, int _Height, const char* _DefaultVa
 	int RealWidth = Size_.x_ * 2;
 	RealWidth += 2;
 
-	PixelData_ = new char* [Size_.y_];
+	PixelData_ = new char*[Size_.y_];
 
 	for (int i = 0; i < Size_.y_; i++)
 	{

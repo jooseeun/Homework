@@ -1,4 +1,4 @@
-// Snake.cpp : �� ���Ͽ��� 'main' �Լ��� ���Ե˴ϴ�. �ű⼭ ���α׷� ������ ���۵ǰ� ����˴ϴ�.
+﻿// Snake.cpp : 이 파일에는 'main' 함수가 포함됩니다. 거기서 프로그램 실행이 시작되고 종료됩니다.
 //
 
 #include <iostream>
@@ -14,10 +14,10 @@ int main()
 {
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 
-	ConsoleScreen::GetInst().CreateScreen(10, 10, "��");
+	ConsoleScreen::GetInst().CreateScreen(10, 10, "□");
 
 	ConsoleObject* NewHead = new Head();
-	NewHead->Init({ 5, 5 }, "��");
+	NewHead->Init({ 5, 5 }, "★");
 
 
 	ConsoleObject* NewBody = GlobalGameLogic::CreateBodyLogic(NewHead);

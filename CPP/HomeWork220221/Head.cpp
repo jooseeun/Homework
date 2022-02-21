@@ -1,16 +1,16 @@
 #include "Head.h"
 #include <conio.h>
 
-Head::Head()
+Head::Head() 
 {
 }
 
-Head::~Head()
+Head::~Head() 
 {
 }
 
 
-void Head::Update()
+void Head::Update() 
 {
 	int Value = _getch();
 

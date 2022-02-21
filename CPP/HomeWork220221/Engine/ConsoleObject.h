@@ -12,7 +12,7 @@ public:
 
 	// constrcuter destructer
 	ConsoleObject(
-		const char* _Text,
+		const char* _Text, 
 		const ConsoleVector& _Pos);
 
 	~ConsoleObject();
@@ -55,7 +55,7 @@ public:
 		SetRenderChar(_Text);
 	}
 
-	inline void Death()
+	inline void Death() 
 	{
 		IsDeath_ = true;
 	}
