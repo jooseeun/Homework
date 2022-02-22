@@ -60,6 +60,9 @@ void Head::ListDestroy() {
 	{
 		iter = AllBody.begin();
 		delete (ConsoleObject*)(*iter);
+		//Á¤´ä.
+		//delete* iter
+		//*iter = nullptr;
 		AllBody.erase(iter);
 	}
 }
